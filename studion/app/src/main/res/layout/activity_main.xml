@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TabHost
+                android:id="@+id/tabHost1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                    <LinearLayout
+                        android:id="@+id/hidetab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 첫 번째 페이지. content1 -->
+                        <include
+                            android:id="@+id/content1"
+                            layout="@layout/content1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <!-- 두 번째 페이지. content2 -->
+                        <include
+                            android:id="@+id/content2"
+                            layout="@layout/content2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <!-- 세 번째 페이지. content3 -->
+                        <include
+                            android:id="@+id/content3"
+                            layout="@layout/content3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <!-- 네 번째 페이지. content4 -->
+                        <include
+                            android:id="@+id/content4"
+                            layout="@layout/content4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <!-- 다섯 번째 페이지. content5 (Login)-->
+                        <include
+                            android:id="@+id/content5"
+                            layout="@layout/content5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#cecece" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <Button
+                                android:id="@+id/tab1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#ffffff"
+                                android:drawableTop="@drawable/ic_home_black_24dp"
+                                android:padding="5dp"
+                                android:text="홈"
+                                android:textColor="#FFcecece" />
+
+                            <Button
+                                android:id="@+id/tab2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#ffffff"
+                                android:drawableTop="@drawable/ic_camera_alt_black_24dp"
+                                android:padding="5dp"
+                                android:text="스튜디오"
+                                android:textColor="#FFcecece" />
+
+                            <Button
+                                android:id="@+id/tab3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#ffffff"
+                                android:drawableTop="@drawable/ic_featured_play_list_black_24dp"
+                                android:padding="5dp"
+                                android:text="매거진"
+                                android:textColor="#FFcecece" />
+
+                            <Button
+                                android:id="@+id/tab4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#ffffff"
+                                android:drawableTop="@drawable/ic_photo_filter_black_24dp"
+                                android:padding="5dp"
+                                android:text="사진"
+                                android:textColor="#FFcecece" />
+
+                            <Button
+                                android:id="@+id/tab5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#ffffff"
+                                android:drawableTop="@drawable/ic_person2_black_24dp"
+                                android:padding="5dp"
+                                android:text="계정"
+                                android:textColor="#FFcecece" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </TabHost>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginRight="-67dp"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <include
+                android:id="@+id/user"
+                layout="@layout/content1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

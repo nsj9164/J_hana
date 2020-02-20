@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="agency">
+        <item>SKT</item>
+        <item>KT</item>
+        <item>LG U+</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>10대 이하</item>
+        <item>20대</item>
+        <item>30대</item>
+        <item>40대</item>
+        <item>50대</item>
+        <item>60대 이상</item>
+    </string-array>
+
+    <string-array name="studio">
+        <item>10001</item>
+        <item>10002</item>
+        <item>10003</item>
+    </string-array>
+
+</resources>

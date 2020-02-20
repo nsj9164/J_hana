@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_new2_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Register2"></activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Find" />
+        <activity android:name=".RealMain" />
+        <activity android:name=".Register" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Center" />
+        <activity android:name=".Favorite" />
+        <activity android:name=".Modify1" />
+        <activity android:name=".Modify2" />
+        <activity android:name=".Modify3" />
+        <activity android:name=".Modify4" />
+        <activity android:name=".MyReview" />
+        <activity android:name=".Notify" />
+        <activity android:name=".ResList" />
+        <activity android:name=".ResDetail" />
+        <activity android:name=".Review" />
+        <activity android:name=".Detail" />
+        <activity android:name=".Room" />
+        <activity android:name=".Reservation" />
+        <activity android:name=".Paydone" />
+        <activity android:name=".MagazineDetail" />
+        <activity android:name=".ReviewList" />
+    </application>
+
+</manifest>
